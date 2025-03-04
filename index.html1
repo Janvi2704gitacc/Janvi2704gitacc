@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CampusClean Laundry</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+
+        /* Header Styles */
+        header {
+            background: #2D909F;
+            color: white;
+            padding: 1rem;
+        }
+
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: #3498db;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: #FFE45C;
+            padding: 4rem 1rem;
+            text-align: center;
+        }
+
+        .hero-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 2rem;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .hero-text {
+            flex: 1 1 100px;
+        }
+
+        .hero-image {
+            flex: 1 1 300px;
+            max-width: 700px;
+        }
+
+        .hero-image img {
+            width: 100%;
+            border-radius: 10px;
+        }
+
+        /* Services Grid */
+        .services {
+            padding: 4rem 1rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 2rem;
+            justify-content: center;
+        }
+
+        .service-card {
+            flex: 1 1 300px;
+            background: #68CAB6;
+            padding: 1.5rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        /* Booking Form */
+        .booking {
+            padding: 2rem 1rem;
+            background: #fff;
+            text-align: center;
+        }
+
+        select {
+            padding: 0.5rem;
+            margin: 1rem;
+            width: 200px;
+        }
+
+        /* Footer */
+        footer {
+            background: #2D909F;
+            color: white;
+            padding: 2rem 1rem;
+            margin-top: 2rem;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 2rem;
+            justify-content: space-between;
+        }
+
+        .footer-section {
+            flex: 1 1 250px;
+        }
+
+        /* Media Queries */
+        @media (max-width: 768px) {
+            nav ul {
+                flex-direction: column;
+                text-align: center;
+                gap: 1rem;
+            }
+
+            .hero-content {
+                flex-direction: column;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .nav-container {
+                flex-direction: column;
+                gap: 1rem;
+            }
+
+            .service-card {
+                flex-basis: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="nav-container">
+            <h1>CampusClean 🧺</h1>
+            <nav>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#pricing">Pricing</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <div class="hero-text">
+                <h2>Stress-Free Laundry for Busy Students</h2>
+                <p>24/7 Service • Free Pickup & Delivery • Student Discounts</p>
+            </div>
+            <div class="hero-image">
+                <img src= "https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.shutterstock.com%2Fsearch%2Flaundry-service&psig=AOvVaw3X7ymdFFhDYSVWAFzewBiW&ust=1741157679451000&source=images&cd=vfe&opi=89978449&ved=0CBQQjRxqFwoTCKCWnoPs74sDFQAAAAAdAAAAABAK" alt="Laundary Service">
+            </div>
+        </div>
+    </section>
+
+    <section class="services" id="services">
+        <h2>Our Services</h2>
+        <div class="grid">
+            <div class="service-card">
+                <h3>🧼 Wash & Fold</h3>
+                <p>Standard service with 24-hour turnaround</p>
+            </div>
+            <div class="service-card">
+                <h3>👔 Premium Pressing</h3>
+                <p>Special care for formal wear and delicate fabrics</p>
+            </div>
+            <div class="service-card">
+                <h3>🛏️ Bulk Bedding</h3>
+                <p>Comforters, sheets, and pillowcases</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="booking">
+        <h3>Book Now</h3>
+        <form>
+            <select id="service-type">
+                <option value="wash-fold">Wash & Fold</option>
+                <option value="pressing">Premium Pressing</option>
+                <option value="bedding">Bulk Bedding</option>
+            </select>
+            <br>
+            <button type="submit">Schedule Pickup</button>
+        </form>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>Contact</h4>
+                <p>📞 (555) 123-4567</p>
+                <p>📧 help@campusclean.com</p>
+            </div>
+            <div class="footer-section">
+                <h4>Hours</h4>
+                <p>Open 24/7</p>
+                <p>Pickup/Delivery: 8am-10pm</p>
+            </div>
+            <div class="footer-section">
+                <h4>Student Discount</h4>
+                <p>15% off with .edu email</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
